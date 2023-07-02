@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   font-family:Verdana, Tahoma, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+ }
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .texto{
+    width:50%;
+    text-align: center;
+    float: left;
+  }
+  .imagem{
+    float: right;
+    width: 50%;
+    height: 600px;
+    background-image: url('../imagens/fotoone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imagem:hover{
+  width: 49%;
+}
+
+.header{
+  background: linear-gradient(45deg, hsla(0, 0%, 27%, 1) 0%, rgb(44, 44, 44) 11%, hsla(0, 0%, 36%, 1) 19%, hsla(0, 0%, 48%, 1) 36%, hsla(0, 0%, 36%, 1) 79%);
+  color: #ffffff;
+  text-decoration: none;
+  height: 13vh;
+  width: 100vw;
+}
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+.menu-horizontal{
+  float:right;
+  width: 50%;
+}
+.menu-horizontal ul li{
+  list-style-type:nome;
+  display: inline;
+  margin-left:40px ;
+  padding-right:9px;
+  font-size: 20px;
+}
+ul ul{
+  display: none;
+  position: absolute;
+  width: 11vw;
+  height: 17vh;
+  background-color: #444444;
+  border-radius:5px;
+  right:0;
+}
+ul li:hover ul{
+  display: block;
+}
+
+  .menu-horizontal ul ul li a{
+    display: block;
+  }
+.menu-horizontal ul ul li a:hover{
+  animation-name: anima;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction:alternate ;
+  animation-delay:0.1s;
+}
+.menu-horizontal a:hover{
+    text-decoration: underline;
+}
+
+.menu-vertical{
+  display: none;
+}
+.menu-horizontal a{
+  text-decoration: none;
+  color:#ffffff;
+}
+.logo{
+  margin: 0px;
+  padding: 0px;
+  width: 25vh;
+  display: inline-block;
+}
+.titulo{
+  padding-top:4vh ;
+  color: #444444;
+  margin-top: 3vh;
+  font-size: 36px;
+}
+.btn-busca{
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  height: 10vh;
+  margin-left: 18vh;
+  background-color: #cba569;
+  box-shadow: rgba(65, 64, 64, 0.685) 8px 7px 3px;
+}
+
+@keyframes anima{
+  0%{
+    transform: scale(1);
+  }
+   100%{
+    transform: scale(1.05);
+   }
+}
+.btn-busca:hover{
+  background-color: #444444;
+  color: #cba569;
+  animation-name: anima;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction:alternate ;
+  animation-delay:0.2s;
+}
+.citacao{
+  color: #444444;
+  font-size: 23px;
+}
+
+.link{
+  width: 10vw;
+  height: 15px;
+  display: block;
+  background-color: #ffffff;
+  color: #444444;
+  font-size: 20px;
+  text-decoration: overline;
+}
+.fale{
+  padding-top: 30vh;
+  float: right;
+}
+.fale:hover{
+  text-decoration: overline;
+}
+.footer{
+  height: 30vh;
+  width: 100vw;
+  background-color: #444444;
+}
+.text-cell{
+  display: none;
+}
+
+
+.footer a{
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+/*MOBILE*/
+ 
+@media(max-width:420px){
+  [class*="col-"] {
+    width: 100%;
+  
+  }
+  *{
+    background-color: #444444;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-horizontal{
+    display: none;
+  }
+  .logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-vertical{
+    display:table-cell;
+    text-decoration: none;
+    width: 100%;  
+    float: right;
+   text-align: center;
+    padding: 15px;
+    list-style-type: none;
+    font-size: 25px;
+    margin-top: 10px; 
+  }
+  .menu-vertical a{
+    text-decoration: none;
+   color: #cba569;
+   border-bottom: solid 1px #cba569;
+  }  
+
+  .texto{
+    display: none;
+  }
+  .imagem{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../imagens/fotoone.png");
+    }
+ .titulo{
+  display: none;
+ }
+ .text-cell{
+  text-align: center;
+  position: relative;
+  color: white;
+  display: table;
+  background-color: #44444400;
+ }
+ .titulo-cell{
+  width:100%;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+ }
+ .btn-cell{
+  background: transparent;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  height: 10vh;
+  background-color: #cba569;
+ }
+
+ .fale-cell{
+  background: transparent;
+  text-align: center;
+ }
+ .fale-cell a {
+  display: inline;
+  background-color: transparent;
+  margin: auto;
+  color: white;
+ }
+}

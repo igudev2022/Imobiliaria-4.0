@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   font-family:Verdana, Tahoma, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+ }
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .col-9{
+    float: right;
+    padding:20px ;  
+    margin: 10px;
+  }
+.col-9 a{
+   width: 100%;
+  color: white;
+  font-size: 20px;
+}
+  .header{
+    background: linear-gradient(45deg, hsla(0, 0%, 27%, 1) 0%, rgb(44, 44, 44) 11%, hsla(0, 0%, 36%, 1) 19%, hsla(0, 0%, 48%, 1) 36%, hsla(0, 0%, 36%, 1) 79%);
+    color: #ffffff;
+    text-decoration: none;
+    height: 13vh;
+    width: 100vw;
+  }
+.logo{
+    margin: 0px;
+    padding: 0px;
+    width: 25vh;
+    display: inline-block;
+  }
+  main .col-3{
+    min-height: 600px;
+    background-color: #7c7c7c;
+    color: white;
+    width: 150px;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+ li{
+  color: white;
+    list-style: none;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  li a {
+    color: white;
+  }
+ul .dropdown{
+  display: none;
+  position: absolute;
+  width: 11vw;
+  height: 30vh;
+  background-color: #1a1919;
+  border-radius:5px;
+  margin-left: 60px;
+  padding-top: 10px;
+  text-align: center;
+}
+ul li:hover .dropdown{
+  display: block;
+}
+
+ul .dropdown li a{
+  color: #ffffff;
+  display: block;
+}
+ul .dropdown li a:hover{
+  color: #cba569;
+}

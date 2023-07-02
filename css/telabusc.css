@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+body{
+  font-family:Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+ }
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+   .busca{
+    color: #cba569;
+    text-decoration: underline;
+   }
+  .menu-vertical{
+    display: none;
+  }
+.menu-horizontal{
+  float:right;
+  width: 50%;
+}
+.menu-horizontal ul li{
+  list-style-type:nome;
+  display: inline;
+  margin-left:40px ;
+  padding-right:9px;
+  font-size: 20px;
+}
+.menu-horizontal a{
+    text-decoration: none;
+    color:#ffffff;
+  }
+
+.menu-horizontal a:hover{
+    text-decoration: underline;
+}
+.header{
+  background: linear-gradient(45deg, hsla(0, 0%, 27%, 1) 0%, rgb(44, 44, 44) 11%, hsla(0, 0%, 36%, 1) 19%, hsla(0, 0%, 48%, 1) 36%, hsla(0, 0%, 36%, 1) 79%);
+    color: #ffffff;
+    text-decoration: none;
+    height: 13vh;
+    width: 100vw;
+  }
+.footer-cell{display: none;}
+.logo{
+    margin: 0px;
+    padding: 0px;
+    width: 25vh;
+    display: inline-block;
+  }
+  .buscar-cell{display: none;}
+  .buscar{
+    margin-left: 65vh;
+    width: 40vw;
+    text-align: center;
+    height: 600px;
+    
+  }
+  .buscar h2{
+    margin-top:10px;
+    color: #cba569;
+  }
+  .buscar form{
+    width: 100%;
+    border-radius: 20px;
+    background-color: #444444e1;
+    height: 600px;
+  }
+  .buscar form input{
+    color: #f7f7f7;
+    margin: 15px;
+    display: inline-flex;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+    background-color: #9b9b9b;
+  }
+  .buscar form label{
+    width: 155px;
+    display: inline-block;
+    padding:5px;
+    font: optional;
+    font-size: 16px;
+    font-weight: 100;
+    color: #cba569;
+  }
+
+  .botao{
+    margin-top:20px;
+    border-radius: 8px;
+    background-color: #cba569;
+    height: 60px;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgb(59, 59, 59) 10px 10px 10px;
+  }
+  .botao:hover{
+    background-color: #444444;
+    color:#cba569;
+  }
+  input::placeholder{
+    color: #ffffff;
+    text-align: center;
+  }
+  .footer {
+    background-color: #575757;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 10vh;
+    width: 100VW;
+  }
+
+hr{display: none;}
+
+.footer a{
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+
+@media (max-width:430px){
+  [class*="col-"] {
+    width: 100%;
+  }
+  *{
+    background-color: #444444;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-horizontal{
+    display: none;
+  }
+  .logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buscar{
+    display: none;
+  }
+  .buscar-cell{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buscar-cell form{
+    text-align: center;
+    width: 100%;
+    height: 620px;
+    background-color: #444444;
+  }
+  .buscar-cell input{
+    background-color: rgb(167, 167, 167);
+    border-radius: 10px;
+    height: 35px;
+    margin: 5px;
+    border: none;
+    width: 300px;
+  }
+  .buscar-cell label{
+    display: block;
+    color: #cba569;
+    margin-top: 10px;
+  }
+  .botao{display: none;}
+  .botao-cell{
+    margin-top: 10px;
+    color: white;
+    background-color: #cba569;
+    text-align: center;
+    font-size: 15px;
+    height: 50px;
+    width: 200px;
+   border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.712) 2px 3px 4px;  
+}
+
+h2{
+  color: #cba569;
+}
+.menu-vertical{
+  display:table-cell;
+  text-decoration: none;
+  width: 100%;  
+  float: right;
+ text-align: center;
+  padding: 15px;
+  list-style-type: none;
+  font-size: 25px;
+  margin-top: 2px; 
+  margin-bottom: 2px;
+  border-bottom: #444444 solid 1px;
+}
+.menu-vertical a{
+  text-decoration: none;
+ color: #cba569;
+ border-bottom: solid 1px #cba569;
+}  
+.footer{
+  display: none;
+}
+.footer-cell{
+  margin-top: 1px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  color: white;
+   width: auto;
+  height: 100px;
+}
+hr{display:grid;}
+}
